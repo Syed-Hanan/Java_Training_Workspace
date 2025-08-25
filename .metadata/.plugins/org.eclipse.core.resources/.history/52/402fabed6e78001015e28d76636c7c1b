@@ -1,0 +1,9 @@
+package addhaarserviceapp.repo;
+
+@Service
+public class aadhaarSrervice {
+
+	private AadhaarRepository repository;
+	
+	public Aadhaar getAadhaarDetails(String aad)
+}

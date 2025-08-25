@@ -1,0 +1,6 @@
+package core;
+
+public sealed interface sealedExample permits Bus {
+   public void price();
+   public void wheels();
+}

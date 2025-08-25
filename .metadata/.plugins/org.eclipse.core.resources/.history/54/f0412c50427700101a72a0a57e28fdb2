@@ -1,0 +1,7 @@
+package com.sutherland.library.exceptions;
+
+public class GetByIdAlreadyPresent extends RuntimeException {
+	public GetByIdAlreadyPresent(String mesg) {
+		super(mesg);
+
+}

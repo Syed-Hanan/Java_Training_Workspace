@@ -1,0 +1,60 @@
+package core;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentResults {
+	public static void main(String[] args)
+	{
+		ArrayList<Student> list=new ArrayList<Student>();
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("enter integer no");
+		int number=sc.nextInt();
+		System.out.println("number "+" "+number);
+		
+		System.out.println("enter double no");
+		double numberdouble=sc.nextDouble();
+		System.out.println("number "+" "+numberdouble);
+		
+		System.out.println("enter string");
+		String numberString =sc.next();
+		System.out.println("number "+" "+numberString);
+		
+		System.out.println("enter floatno");
+		float numberfloat=sc.nextFloat();
+		System.out.println("number "+" "+numberfloat);
+		
+		list.add(new Student(sc.nextInt(),sc.next(),sc.nextDouble(),sc.nextDouble(),sc.nextDouble()));
+		//list.add(new Student(sc.nextInt(),sc.next(),sc.nextDouble(),sc.nextDouble(),sc.nextDouble()));
+		//list.add(new Student(sc.nextInt(),sc.next(),sc.nextDouble(),sc.nextDouble(),sc.nextDouble()));
+		
+		int i=0;
+		for(Student st :list) {
+			/*double a = st.getSub1marks()+getSub2marks()+st.getSub3marks()
+			System.out.println(st.getSub1marks()+" "+st.getSub2marks()+" "+st.getSub3marks());
+		double total = st.getSub1marks()+st.getSub2marks()+st.getSub3marks();
+		
+		double avg =total/3;
+		if(avg>40)
+		{
+			System.out.println("pass");
+		}
+		else {
+		System.out.println("fail");
+		}*/
+			
+			double marks=st.getMarks();
+			double avg = marks/3;
+			if(avg>40)
+			{
+				System.out.println("pass");
+			}
+			else {
+			System.out.println("fail");
+			}
+	i++;
+		}
+	}
+
+}

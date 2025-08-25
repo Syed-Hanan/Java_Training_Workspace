@@ -1,0 +1,18 @@
+package com.sutherland;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+@RequestMapping("/sample")
+public class SampleController {
+	@GetMapping
+	public String wecome()
+	{
+		return "welcome to kashmir";
+	}
+	@GetMapping("/getreq")
+	public String anotherGet()
+	{
+		return "another get request";
+	}
+
+}

@@ -1,0 +1,51 @@
+package core;
+
+public class Student {
+	private int regno;
+	private String studentname;
+	private double sub1marks;
+	private double sub2marks;
+	private double sub3marks;
+	public Student(int regno, String studentname, double sub1marks, double sub2marks, double sub3marks) {
+		super();
+		this.regno = regno;
+		this.studentname = studentname;
+		this.sub1marks = sub1marks;
+		this.sub2marks = sub2marks;
+		this.sub3marks = sub3marks;
+	}
+	public int getRegno() {
+		return regno;
+	}
+	public void setRegno(int regno) {
+		this.regno = regno;
+	}
+	public String getStudentname() {
+		return studentname;
+	}
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+	public double getSub1marks() {
+		return sub1marks;
+	}
+	public void setSub1marks(double sub1marks) {
+		this.sub1marks = sub1marks;
+	}
+	public double getSub2marks() {
+		return sub2marks;
+	}
+	public void setSub2marks(double sub2marks) {
+		this.sub2marks = sub2marks;
+	}
+	public double getSub3marks() {
+		return sub3marks;
+	}
+	public void setSub3marks(double sub3marks) {
+		this.sub3marks = sub3marks;
+	}
+	
+	
+	
+
+}

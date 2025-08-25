@@ -1,0 +1,14 @@
+package com.sutherland.library.service;
+
+
+
+
+import org.springframework.stereotype.Service;
+
+import com.sutherland.library.entity.UserAccount;
+
+
+public interface UserService {
+	void addUser(UserAccount user);
+   UserAccount loginValidate(String username,String password);
+}

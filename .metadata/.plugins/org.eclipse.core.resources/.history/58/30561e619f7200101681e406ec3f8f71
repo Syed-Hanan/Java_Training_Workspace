@@ -1,0 +1,17 @@
+package jdbcapp;
+import java.sql.*;
+
+import oracle.jdbc.OracleDriver;
+
+public class TestDatabase {
+
+	public static void main(String[] args) throws SQLException {
+		DriverManager.registerDriver(new OracleDriver());
+		String url = "jdbc:oracle:thin:@10.33.59.56:1521";
+		DriverManager.getConnection(url,"system","manager");
+		System.out.println("connected");
+		
+
+	}
+
+}

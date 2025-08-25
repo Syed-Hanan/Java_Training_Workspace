@@ -1,0 +1,5 @@
+package com.example.userauth.dto;
+
+public class AddUserRequest {
+
+}

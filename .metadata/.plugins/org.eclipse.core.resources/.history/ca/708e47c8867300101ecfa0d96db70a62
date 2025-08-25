@@ -1,0 +1,15 @@
+package springproject;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class EmployeeSpringMAin {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("springconfig.xml");
+		Employee std = (Employee) ctx.getBean("empl");
+		System.out.println(std.getCode()+" "+std.getEmpname()+std.getSalary());
+
+	}
+
+}

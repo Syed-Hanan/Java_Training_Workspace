@@ -1,0 +1,10 @@
+package com.sutherland.loanapp;
+
+public class LoanAppMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package addhaarserviceapp.main;
+
+import org.springframework.boot.SpringApplication;
+
+
+
+public class AddhaarServiceMain {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AddhaarServiceMain.class, args);
+
+	}
+
+}

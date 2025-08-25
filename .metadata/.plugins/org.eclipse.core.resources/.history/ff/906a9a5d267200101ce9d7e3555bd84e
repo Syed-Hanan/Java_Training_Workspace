@@ -1,0 +1,24 @@
+package core;
+
+import java.util.Scanner;
+
+public class checkDAysIn {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+try {
+	Scanner sc =new Scanner(System.in);
+	String monthInput=sc.next();
+	Months input;
+	
+	try {
+		input=Months.valueOf(monthInput);
+	}catch(IllegalArgumentException e){throw new InvalidMonthException("not a valid month" +monthInput);
+		
+	}
+	int numberOfDaysOfInputMonth
+	
+}
+	}
+
+}

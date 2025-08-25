@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.sutherland.library.service.BookServiceIml.java&apos; to &apos;BookServiceImpl.java&apos;&#x0D;&#x0A;- Original project: &apos;sutherland-library-app&apos;&#x0D;&#x0A;- Original element: &apos;com.sutherland.library.service.BookServiceIml.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.sutherland.library.service.BookServiceImpl.java&apos;" description="Rename compilation unit &apos;BookServiceIml.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sutherland.library.service{BookServiceIml.java" name="BookServiceImpl.java" references="false" stamp="1754910818324" version="1.0"/>
+</session>

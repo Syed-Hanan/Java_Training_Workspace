@@ -1,0 +1,21 @@
+package core;
+
+public class SubExample extends Arithmetic {
+	
+	public int hello(int num1,int num2)
+	{
+		return num1-num2;
+	}
+
+	public static void main(String[] args) {
+		
+		SubExample sub = new SubExample();
+		sub.num1=67;
+		sub.num2=68;
+		sub.cal();
+		sub.calvalue(4,6);
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package core;
+
+public class practiceinterface {
+
+	public static void main(String[] args) {
+	
+		 Arithamatic arth =(x,y)->
+		{
+			System.out.println("result");
+			return X+y;
+		}
+		
+		int a =arth(4,8);
+		System.out.println(a);
+		
+		arth.display();
+		Arithamatic.message();
+		
+		
+
+	}
+
+}

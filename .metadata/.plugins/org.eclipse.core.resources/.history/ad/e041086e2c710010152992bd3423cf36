@@ -1,0 +1,58 @@
+package core;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.TreeSet;
+
+public class EmployeeMain {
+	public static void main(String[] args)
+	{
+		
+		/*TreeSet set =new TreeSet();
+		set.add(new Employee(454,"hanan",67));
+		set.add(new Employee(56,"syed",78));
+		set.add(new Employee(56,"abcd",78));
+		set.add(new Employee(56,"gaba",78));
+		set.add(new Employee(56,"stressed",78));
+		System.out.println(set);
+		
+		TreeSet<Employee> empset = new TreeSet<Employee>();
+		
+		empset.add(new Employee(302,"react",4888));
+		empset.add(new Employee(355502,"jobreact",4888));
+		empset.add(new Employee(3662,"reactnode",4888));
+		
+		for(Employee emp :empset) {
+			System.out.println(emp.getCode()+emp.getEmpname());
+		}*/
+		
+		ArrayList<Employee> emplist = new ArrayList<Employee>();
+		
+		emplist.add(new Employee(454,"hanan",67));
+		emplist.add(new Employee(56,"syed",78));
+		emplist.add(new Employee(56,"abcd",78));
+		
+		Collections.sort(emplist);
+		
+		for(Employee emp : emplist)
+			System.out.println(emp);
+		
+		/*namewise sorting
+		System.out.println();
+		
+		Collections.sort(emplist,(emp1,emp2)->{
+			return emp1.getEmpname().compareTo(emp2.getEmpname());
+		});
+		
+		for(Employee emp : emplist)
+			System.out.println(emp);*/
+		
+		
+		Collections.sort(emplist,(emp1,emp2)->{
+			return Double.compare(emp1.getSalary(),emp2.getSalary());
+		});
+		
+		for(Employee emp : emplist)
+			System.out.println(emp.getSalary());
+	}
+}

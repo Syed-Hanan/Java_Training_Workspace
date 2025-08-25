@@ -1,0 +1,29 @@
+package core;
+
+import java.util.ArrayList;
+import java.util.TreeSet;
+
+public class EmployeeMain {
+	public static void main(String[] args)
+	{
+		TreeSet set =new TreeSet();
+		set.add(new Employee(454,"hanan",67));
+		set.add(new Employee(56,"syed",78));
+		set.add(new Employee(56,"abcd",78));
+		set.add(new Employee(56,"gaba",78));
+		set.add(new Employee(56,"stressed",78));
+		System.out.println(set);
+		
+		TreeSet<Employee> empset = new TreeSet<Employee>();
+		
+		empset.add(new Employee(302,"react",4888));
+		empset.add(new Employee(355502,"jobreact",4888));
+		empset.add(new Employee(3662,"reactnode",4888));
+		
+		for(Employee emp :empset) {
+			System.out.println(emp.getCode()+emp.getEmpname());
+		}
+			)
+	}
+
+}

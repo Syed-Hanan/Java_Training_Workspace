@@ -1,0 +1,5 @@
+package addhaarserviceapp.entity;
+
+public class AddhaarService {
+
+}

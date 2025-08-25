@@ -1,0 +1,39 @@
+package core;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+
+public class BookWithMap {
+
+	public static void main(String[] args) {
+		
+     /*Book bok= new Book(5,"syed","hanan",780);
+     
+     Map<String,Object> data = new HashMap<String,Integer>();
+     data.put("id",bok.getId());
+     data.put("title",bok.getTitle());
+     data.put("author",bok.getAuthor());
+     data.put("price",bok.getPrice());
+     
+     Set<Entry<String, Object>> set =  data.entrySet();
+		Iterator<Entry<String, Object>> itr =set.iterator();
+		
+		while(itr.hasNext())
+			System.out.println(itr.next());*/
+		
+		 Map<Integer,Book> data = new HashMap<Integer,Book>();
+		 data.put(1,new Book(4,"hell","hanan",780));
+		 data.put(1,new Book(4,"hell","hanan",780));
+		 data.put(1,new Book(4,"hell","hanan",780));
+		 
+		 Set<Entry<Integer,Book>> set =  data.entrySet();
+			Iterator<Entry<Integer,Book>> itr =set.iterator();
+			
+			while(itr.hasNext())
+				System.out.println(itr.next());
+		
+}
+}

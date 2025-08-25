@@ -1,0 +1,14 @@
+package core;
+
+public class Addition extends Arithmetic {
+	
+	num1=20;
+	num2=9;
+
+	public static void main(String[] args) {
+		
+         Addition ad = new Addition();
+         ad.cal();
+	}
+}
+}

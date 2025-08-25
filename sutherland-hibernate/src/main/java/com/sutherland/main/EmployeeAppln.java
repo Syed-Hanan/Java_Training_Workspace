@@ -1,0 +1,37 @@
+package com.sutherland.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.sutherland.entity.Employee;
+
+public class EmployeeAppln {
+
+	public static void main(String[] args) {
+		Configuration config = new Configuration();
+		config.configure("hibernate.cfg.xml");
+		SessionFactory factory = config.buildSessionFactory();
+		Session session =factory.openSession();
+		Transaction train = session.beginTransaction();
+		
+		Employee empl = new Employee();
+		empl.setEmpId(34);
+		empl.setEmpName("hanan");
+		empl.setSalary(50000);
+		
+		empl.setEmpId(343);
+		empl.setEmpName("syed");
+		empl.setSalary(70000);
+		
+		
+		session.save(empl);
+		train.commit();
+		session.close();
+		factory.close();
+		
+
+	}
+
+}

@@ -1,0 +1,34 @@
+package core;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.HashMap;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		
+		Map<String,Integer> data = new HashMap<String,Integer>();
+		data.put("java", 12345);
+		data.put("suthaerland",4546);
+		data.put("syed", 76);
+		data.put("habab", 15);
+		data.put("htgya", 5);
+		data.put("java", 12345);
+		System.out.println(data);
+		System.out.println(data.get("syed"));
+		Set<Entry<String,Integer>> set =  data.entrySet();
+		Iterator<Entry<String,Integer>> itr =set.iterator();
+		
+		while(itr.hasNext())
+			System.out.println(itr.next());
+		
+		
+		
+	
+
+	}
+
+}

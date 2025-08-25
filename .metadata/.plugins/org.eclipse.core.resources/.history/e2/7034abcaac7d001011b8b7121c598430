@@ -1,0 +1,19 @@
+package com.sutherland.library.service;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+
+import com.sutherland.library.entity.Book;
+import com.sutherland.library.exceptions.BookIdAlreadyExistsException;
+import com.sutherland.library.exceptions.GetByIdAlreadyPresent;
+
+public interface BookService {
+	void addBook(Book book) throws BookIdAlreadyExistsException;
+	List<Book> getAllBooks();
+	Book getBookById(int bookId) throws GetByIdAlreadyPresent;
+	void updateBook(Book book);
+	ResponseEntity<String> deleteBook(int bookId);
+	List<Book> getBooksByAuthor(String author);
+	List<Book> getBooksByTitleLike(String title);
+}

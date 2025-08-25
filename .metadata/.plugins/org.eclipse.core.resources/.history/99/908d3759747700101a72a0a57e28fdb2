@@ -1,0 +1,5 @@
+package com.sutherland.loanapp.repo;
+
+public class LoanAppRepo {
+
+}

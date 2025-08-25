@@ -1,0 +1,10 @@
+package jdbcapp;
+
+public class DeleteandUpdateexample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,51 @@
+package com.example.userauth.service.impl;
+
+import com.example.userauth.dto.AddUserRequest;
+import com.example.userauth.dto.LoginRequest;
+import com.example.userauth.dto.LoginResponse;
+import com.example.userauth.dto.UserResponse;
+import com.example.userauth.model.UserAccount;
+import com.example.userauth.repository.UserAccountRepository;
+import com.example.userauth.service.UserService;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+    private final UserAccountRepository repo;
+    private final PasswordEncoder encoder;
+
+    public UserServiceImpl(UserAccountRepository repo, PasswordEncoder encoder) {
+        this.repo = repo;
+        this.encoder = encoder;
+    }
+
+    @Override
+    public UserResponse addUser(AddUserRequest req) {
+        if (repo.existsByUsername(req.getUsername())) {
+            throw new DataIntegrityViolationException("Username already exists");
+        }
+
+        String hash = encoder.encode(req.getPassword());
+        UserAccount ua = new UserAccount(req.getUsername(), hash, req.getRole());
+        UserAccount saved = repo.save(ua);
+
+        return new UserResponse(saved.getId(), saved.getUsername(), saved.getRole());
+    }
+
+    @Override
+    public LoginResponse loginValidate(LoginRequest req) {
+        return repo.findByUsername(req.getUsername())
+                .map(user -> {
+                    boolean matches = encoder.matches(req.getPassword(), user.getPasswordHash());
+                    if (matches) {
+                        return new LoginResponse(true, "Login successful", user.getRole());
+                    } else {
+                        return new LoginResponse(false, "Invalid username or password", null);
+                    }
+                })
+                .orElseGet(() -> new LoginResponse(false, "Invalid username or password", null));
+    }
+}

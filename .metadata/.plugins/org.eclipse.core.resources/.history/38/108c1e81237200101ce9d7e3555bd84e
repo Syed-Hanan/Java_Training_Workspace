@@ -1,0 +1,6 @@
+package core;
+
+public non-sealed class Bus  implements SealedExample{
+
+	
+}

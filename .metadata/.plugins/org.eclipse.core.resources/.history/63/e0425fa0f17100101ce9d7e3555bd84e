@@ -1,0 +1,56 @@
+package core;
+
+import java.util.Scanner;
+
+public class CheckDaysInmonth {
+	
+	public enum Month {
+		JAN(31),
+		FEB(28),
+		MAR(31),
+		APR(30),
+		MAY(31),
+		JUN(30),
+		JUL(31),
+		AUG(30),
+		SEP(31),
+		OCT(30),
+		NON(31),
+		DEC(30);
+		
+		private final int days;
+		
+		Month(int days)
+		{
+			this.days=days;
+		}
+		
+		public int getDays() {
+			return days;
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		 System.out.print("Enter a string: ");
+	        String stringInput = sc.next();
+	        System.out.println("You entered: " + stringInput);
+	       
+		
+   for (Month month:Month.values())
+   {
+	   System.out.println(month);
+	   System.out.println(month.getDays());
+	   
+	   Month hanan=Month.valueOf(stringInput);
+	   
+       switch(hanan) {
+       case JAN:System.out.println("number of days in the given "+month+ "is" +month.getDays());
+       case FEB:System.out.println("number of days in the given "+month+ "is" +month.getDays());
+       }
+   }
+	}
+
+}

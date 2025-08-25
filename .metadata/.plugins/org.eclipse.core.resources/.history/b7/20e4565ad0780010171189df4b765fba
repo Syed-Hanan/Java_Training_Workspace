@@ -1,0 +1,13 @@
+package com.sutherland.loan.repo;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@FeignClient(name= "aadhaar-service")
+public interface AaadhaarClient {
+	
+	@GetMapping("/aadhaar/{addhaarNumber}")
+	//AddhaarService getAadhaarDetails(@PathVariable String addhaarNumber);
+
+}

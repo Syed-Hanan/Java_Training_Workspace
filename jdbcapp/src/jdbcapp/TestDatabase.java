@@ -1,0 +1,46 @@
+package jdbcapp;
+import java.io.InputStream;
+import java.sql.*;
+
+import oracle.jdbc.OracleDriver;
+
+public class TestDatabase {
+
+	public static void main(String[] args) throws SQLException {
+		DriverManager.registerDriver(new OracleDriver());
+		String url = "jdbc:oracle:thin:@10.33.59.56:1521:xe";
+		Connection conn = DriverManager.getConnection(url,"system","manager");
+		System.out.println("connected");
+		
+		java.util.Scanner sc= new  java.util.Scanner(System.in);
+		System.out.println("enter reg no");
+		System.out.println("enter name");
+		System.out.println("enter sub 1 marks");
+		System.out.println("eneter sub 2 marks");
+		int a=sc.nextInt();
+		String name =sc.next();
+		int sub1marks=sc.nextInt();
+		int sub2marks=sc.nextInt();
+		String qry="insert into student values(?,?,?,?)";
+		PreparedStatement pst = conn.prepareStatement(qry);
+		pst.setInt(1, a);
+		pst.setString(2, name);
+		pst.setInt(3, sub1marks);
+		pst.setInt(4, sub2marks);
+		//pst.setDate(5, "12-AUG-56");
+		//pst.setInt(a, a);
+		
+		int rows=pst.executeUpdate();
+		System.out.println("inserted"+rows);
+		conn.close();
+		
+		
+
+	}
+
+	private static java.util.Scanner Scanner(InputStream in) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

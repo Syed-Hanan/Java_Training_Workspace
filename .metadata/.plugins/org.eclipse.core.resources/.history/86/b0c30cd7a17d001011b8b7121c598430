@@ -1,0 +1,5 @@
+package com.example.userauth.service;
+
+public interface UserService {
+
+}

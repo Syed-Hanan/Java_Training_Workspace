@@ -1,0 +1,52 @@
+package com.example.userauth.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+@Entity
+@Table(name = "USER_ACCOUNTS",
+       uniqueConstraints = @UniqueConstraint(name = "UK_USER_USERNAME", columnNames = "USERNAME"))
+@SequenceGenerator(name = "user_seq", sequenceName = "USER_SEQ", allocationSize = 1)
+public class UserAccount {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
+    @Column(name = "ID")
+    private Long id;
+
+    @NotBlank
+    @Size(min = 3, max = 50)
+    @Column(name = "USERNAME", nullable = false, length = 50)
+    private String username;
+
+    // store the BCrypt hash here (60 chars typical)
+    @NotBlank
+    @Column(name = "PASSWORD_HASH", nullable = false, length = 100)
+    private String passwordHash;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "ROLE", nullable = false, length = 10)
+    private Role role;
+
+    public UserAccount() {}
+
+    public UserAccount(String username, String passwordHash, Role role) {
+        this.username = username;
+        this.passwordHash = passwordHash;
+        this.role = role;
+    }
+
+    // getters & setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+    public String getPasswordHash() { return passwordHash; }
+    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
+
+    public Role getRole() { return role; }
+    public void setRole(Role role) { this.role = role; }
+}

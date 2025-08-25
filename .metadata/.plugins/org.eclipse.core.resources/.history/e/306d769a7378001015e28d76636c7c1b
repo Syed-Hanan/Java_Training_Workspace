@@ -1,0 +1,8 @@
+package com.sutherland.loan.repo;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name= "aadhaar-service")
+public class AadhaarClient {
+
+}

@@ -1,0 +1,31 @@
+package addhaarserviceapp.entity;
+
+public class AddhaarService {
+	
+	private int addhaarNumber;
+	private String name;
+	private String address;
+	public int getAddhaarNumber() {
+		return addhaarNumber;
+	}
+	public void setAddhaarNumber(int addhaarNumber) {
+		this.addhaarNumber = addhaarNumber;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	@Override
+	public String toString() {
+		return "AddhaarService [addhaarNumber=" + addhaarNumber + ", name=" + name + ", address=" + address + "]";
+	}
+
+}

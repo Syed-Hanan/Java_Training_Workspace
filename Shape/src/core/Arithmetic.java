@@ -1,0 +1,18 @@
+package core;
+
+public sealed class Arithmetic permits AdditionExample ,SubExample, Addition {
+	protected int num1;
+	protected int num2;
+	
+	public void cal()
+	{
+		System.out.println("i am from arthematic");
+		
+	}
+	public void calvalue(int num1,int num2)
+	{
+		System.out.println(num1*num2); ;
+		
+	}
+
+}

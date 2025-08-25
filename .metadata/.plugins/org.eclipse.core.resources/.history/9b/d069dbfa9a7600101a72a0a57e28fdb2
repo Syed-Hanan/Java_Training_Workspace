@@ -1,0 +1,19 @@
+package com.sutherland.library.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Book {
+	@Id
+  private int bookId;
+	@Column(length = 70)
+  private String title;
+	@Column(length = 60)
+  private String author;
+	@Column(length = 50)
+  private String publisher;
+	@Column
+  private double price;
+}

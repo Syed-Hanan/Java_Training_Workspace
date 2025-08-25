@@ -1,0 +1,5 @@
+package com.sutherland.loanapp.service;
+
+public class LoanAppService {
+
+}

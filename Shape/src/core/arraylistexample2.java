@@ -1,0 +1,18 @@
+package core;
+
+import java.util.ArrayList;
+
+public class arraylistexample2 {
+	public static void main(String[] args)
+	{
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("syed");
+		list.add("Ahnan");
+		list.add("Simnani");
+		for(String str:list)
+		{
+			System.out.println(str);
+		}
+	}
+
+}

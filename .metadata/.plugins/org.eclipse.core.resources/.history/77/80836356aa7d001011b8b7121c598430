@@ -1,0 +1,25 @@
+package com.sutherland.library.entity;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+@Entity
+
+public class UserAccount {
+
+    @Id
+    @Column(name = "USERNAME", nullable = false, length = 50)
+    private String username;
+
+    
+    @Column()
+    private String password;
+
+    
+    @Column()
+    private String role;
+
+    public UserAccount() {}
+
+    

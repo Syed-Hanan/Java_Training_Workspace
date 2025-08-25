@@ -1,0 +1,32 @@
+package core;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.TreeSet;
+
+public class EmployeeMain {
+	public static void main(String[] args)
+	{
+		
+		ArrayList<Employee> emplist = new ArrayList<Employee>();
+		
+		emplist.add(new Employee(454,"hanan",67));
+		emplist.add(new Employee(56,"syed",78));
+		emplist.add(new Employee(56,"abcd",78));
+		
+		Collections.sort(emplist);
+		
+		for(Employee emp : emplist)
+			System.out.println(emp);
+		System.out.println();
+		
+		Collections.sort(emplist,(emp1,emp2)->{
+			return emp1.getEmpname().compareTo(emp2.getEmpname());
+		});
+		
+		for(Employee emp : emplist)
+			System.out.println(emp);
+		)
+	}
+
+}

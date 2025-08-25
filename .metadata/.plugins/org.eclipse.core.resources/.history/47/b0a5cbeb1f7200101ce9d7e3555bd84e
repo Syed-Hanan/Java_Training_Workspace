@@ -1,0 +1,13 @@
+package core;
+
+public  class Arithmetic  {
+	protected int num1;
+	protected int num2;
+	
+	public void cal()
+	{
+		System.out.println("i am from arthematic");
+		
+	}
+
+}

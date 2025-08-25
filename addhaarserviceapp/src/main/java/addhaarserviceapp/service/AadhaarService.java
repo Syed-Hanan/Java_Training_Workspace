@@ -1,0 +1,20 @@
+package addhaarserviceapp.service;
+
+import org.springframework.stereotype.Service;
+
+import addhaarserviceapp.entity.AddhaarService;
+import addhaarserviceapp.repo.AadhaarRepository;
+
+@Service
+public class AadhaarService {
+	
+	private AadhaarRepository repository;
+	public AddhaarService getAadhaarDetails(String addhaarNumber) {
+		return repository.findById(addhaarNumber).orElse(null);
+	}
+	
+	public AddhaarService saveAadhaar(AddhaarService aadhaar) {
+		return repository.save(aadhaar);
+	}
+
+}

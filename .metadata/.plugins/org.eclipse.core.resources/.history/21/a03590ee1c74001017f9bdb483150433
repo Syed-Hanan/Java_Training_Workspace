@@ -1,0 +1,26 @@
+package core.annotation;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component (value="cust")
+public class Customer {
+	@Value("4546")
+	private int code;
+	@Value("hanan")
+	private String cusName;
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
+	public String getCusName() {
+		return cusName;
+	}
+	public void setCusName(String cusName) {
+		this.cusName = cusName;
+	}
+	
+
+}

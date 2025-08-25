@@ -1,0 +1,57 @@
+package core;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class StreamExample {
+
+	public static void main(String[] args) {
+ArrayList<Employee> emplist = new ArrayList<Employee>();
+		
+		emplist.add(new Employee(454,"hanan",67));
+		emplist.add(new Employee(56,"syed",789));
+		emplist.add(new Employee(256,"abcd",78));
+		emplist.add(new Employee(546,"abrrcd",78));
+		emplist.add(new Employee(356,"abrrcd",78));
+		emplist.add(new Employee(506,"abc44d",78));
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		List<Employee> salarywise= emplist.stream().filter((emp)->emp.getSalary()>70).map((e)->e).collect(Collectors.toList());
+		
+		//salarywise.forEach((e)->System.out.println(e));
+		
+		Optional<Employee> empl = emplist.stream().filter((emp)->emp.getCode()==56).map(employee->employee).findFirst();
+		//Optional<Employee> emp2 = emplist.stream().filter((emp)->emp.getCode()==intNumber).map(employee->employee).findFirst();
+		
+		
+		 Predicate<Employee> checkCode = emp->emp.getCode()==56;
+		 System.out.print("Enter employee code: ");
+	        int intNumber = sc.nextInt();
+	        System.out.println("You entered: " + intNumber);
+	        try {
+	        
+	      Optional<Employee> emp2 = emplist.stream().filter(checkCode).map(employee->employee).findFirst();
+	      if(emp2.isEmpty())
+				throw new Exception("Employee not found");
+	      System.out.println(emp2);
+	        }
+	        catch(Exception e)
+	        {
+	        	System.out.println(e.getMessage());
+	        }
+	        
+		/*if(emp2.isEmpty())
+			System.out.println("Employee not found");
+		else
+			System.out.println(emp2);*/
+		
+
+	}
+
+}

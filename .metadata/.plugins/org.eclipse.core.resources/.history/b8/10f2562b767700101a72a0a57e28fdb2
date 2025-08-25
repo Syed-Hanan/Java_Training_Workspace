@@ -1,0 +1,61 @@
+package com.sutherland.loanapp.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class LoanApp {
+	
+	private int loanId;
+	private String custname;
+	private String email;
+	private int mobleNo;
+	private double monthlyIncome;
+	private double loanAmount;
+	private String pancard;
+	private int creditScore;
+	public int getLoanId() {
+		return loanId;
+	}
+	public void setLoanId(int loanId) {
+		this.loanId = loanId;
+	}
+	public String getCustname() {
+		return custname;
+	}
+	public void setCustname(String custname) {
+		this.custname = custname;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public int getMobleNo() {
+		return mobleNo;
+	}
+	public void setMobleNo(int mobleNo) {
+		this.mobleNo = mobleNo;
+	}
+	public double getMonthlyIncome() {
+		return monthlyIncome;
+	}
+	public void setMonthlyIncome(double monthlyIncome) {
+		this.monthlyIncome = monthlyIncome;
+	}
+	public double getLoanAmount() {
+		return loanAmount;
+	}
+	public void setLoanAmount(double loanAmount) {
+		this.loanAmount = loanAmount;
+	}
+	public String getPancard() {
+		return pancard;
+	}
+	public void setPancard(String pancard) {
+		this.pancard = pancard;
+	}
+	
+	
+
+}

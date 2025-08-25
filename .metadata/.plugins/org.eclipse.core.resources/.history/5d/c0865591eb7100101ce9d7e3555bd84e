@@ -1,0 +1,16 @@
+package core;
+
+public class Switchexample2 {
+
+	public static void main(String[] args) {
+		
+		int category=1;
+		switch(category) {
+		
+		case 1->System.out.println("one");
+		}
+
+
+	}
+
+}
